@@ -2,7 +2,7 @@
 <% @movies.each do |movie| %>
     <section class="movie">
         <div class="summary">
-            <h2><%= movie.title %></h2>
+            <h2><%= link_to movie.title, movie %></h2>
             <h3> <%= release_date(movie) %> (<%= movie.rating %>) </h3>
             <span>
                 <%= total_gross(movie) %>
