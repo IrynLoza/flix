@@ -1,12 +1,16 @@
 <section class="movie-details">
-        <div class="details">
-            <h2><%= @movie.title %></h2>
-            <h3> <%= release_date(@movie) %> (<%= @movie.rating %>) </h3>
-            <span>
-                <%= total_gross(@movie) %>
-            </span>
-            <p>
-                <%= @movie.description %>
-            </p>
-        </div>
-    </section>
+    <div class="details">
+        <h2><%= @movie.title %></h2>
+        <h3> <%= release_date(@movie) %> (<%= @movie.rating %>) </h3>
+        <span>
+            <%= total_gross(@movie) %>
+        </span>
+        <p>
+            <%= @movie.description %>
+        </p>
+    </div>
+</section>
+
+<section class="admin">
+    <%= link_to "Edit", edit_movie_path(@movie), class: "button" %>
+</section>
